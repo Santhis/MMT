@@ -49,7 +49,7 @@ public class TestListener implements ITestListener,IExecutionListener {
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		// TODO Auto-generated method stub
+		System.out.println("To check on test start in GIT");
 		
 	}
 
