@@ -1,0 +1,76 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="test" allow-return-values="true">
+<listeners>
+	<listener class-name="testcases.TestListener"/>
+</listeners>
+<test name="Standard">
+ <groups>
+    <run>
+      <include name="cust"  />
+      <include name="sites"  />
+    </run>
+  </groups>
+
+  <classes>
+ 
+    <class name="testcases.Gentest">
+      <methods>
+        	<include name="customerSearch" />
+        	<include name="addProject" />
+         	<include name="addAcctmngr" />
+       	 	<include name="addSitesMenu" />
+       	 	<include name="addSites"/>
+      </methods>
+    
+    </class>
+  </classes>
+</test>
+
+<test name="NonStandard">
+ <groups>
+    <run>
+        <include name="cust"  />
+      	<include name="sites"  />
+    </run>
+  </groups>
+
+  <classes>
+ 
+    <class name="testcases.Gentest">
+          <methods>
+        	<include name="customerSearch" />
+        	<include name="addProject" />
+         	<include name="addAcctmngr" />
+       	 	<include name="addSitesMenu" />
+       	 	<include name="addSites"/>
+       	 	<include name="ServiceQualification"/>
+      </methods>
+    </class>
+    <class name ="testcases.NonStandard"></class>
+  </classes>
+</test>
+<test name="Hybrid">
+ <groups>
+    <run>
+        <include name="cust"  />
+      	<include name="sites"  />
+    </run>
+  </groups>
+  <classes>
+    <class name="testcases.Gentest">
+          <methods>
+        	<include name="customerSearch" />
+        	<include name="addProject" />
+         	<include name="addAcctmngr" />
+       	 	<include name="addSitesMenu" />
+       	 	<include name="addSites"/>
+      	</methods>
+    </class>
+    <class name ="testcases.APItesting">
+         <methods>
+         	<include name ="aptTesting" />
+         </methods>
+    </class>
+  </classes>
+</test>
+</suite>
